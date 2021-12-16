@@ -32,7 +32,7 @@ To visualize URDF file in your rviz, you can use `display.launch` file.
 $ roslaunch gundam_rx78_description display.launch
 ```
 
-
+![Rviz](imgs/rviz.png)
 
 
 
@@ -83,7 +83,7 @@ $ rosrun gundam_rx78_control joint_trajectory_client_csv.py `rospack find gundam
 $ rosrun gundam_rx78_control joint_trajectory_client_csv.py `rospack find gundam_rx78_control`/sample/csv/up.csv
 ```
 
-![Alt Text](imgs/gundamAKG.gif)
+![Simulation](imgs/gundamAKG.gif)
 
 Note that currently, we have several limitation on this simulation, we only have position controller etc.
 
