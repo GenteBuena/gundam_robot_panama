@@ -1,8 +1,28 @@
 gundam_robot_Panama
 ========================================================================================================================================================================
 ROS packages for GUNDAM robots
+
 original: https://github.com/gundam-global-challenge/gundam_robot.git
+
+
 ![GUNDAM Gazebo Simulation](imgs/gundam_AKG.jpg)
+
+
+
+How to setup workspace
+----------------------
+
+```
+$ mkdir -p catkin_ws/src
+$ cd  catkin_ws
+$ cd src/
+$ git clone https://github.com/GenteBuena/gundam_robot_panama.git
+$ cd ..
+$ source /opt/ros/$ROS_DISTRO/setup.bash
+$ rosdep install -y -r --from-paths src --ignore-src
+$ catkin_make
+$ source devel/setup.bash
+```
 
 How to visualize URDF model
 ===========================
@@ -11,6 +31,10 @@ To visualize URDF file in your rviz, you can use `display.launch` file.
 ```
 $ roslaunch gundam_rx78_description display.launch
 ```
+
+
+
+
 
 How to run gazebo simulation
 ============================
@@ -72,39 +96,4 @@ using the gundam control with joint_tajectory_client_csv.py and inputting a .csv
 
 This will use the patterns indicated in the file to simulate the movement of the gundam according to the values of the angles of each component.
 
-For Developers Only
-===================
 
-How to setup workspace
-----------------------
-
-We recommend you to use `wstool` to setup you workspace.
-
-```
-$ mkdir -p catkin_ws/src
-$ cd  catkin_ws
-$ cd src/
-$ git clone https://github.com/GenteBuena/gundam_robot_panama.git
-$ cd ..
-$ source /opt/ros/$ROS_DISTRO/setup.bash
-$ rosdep install -y -r --from-paths src --ignore-src
-$ catkin_make
-$ source devel/setup.bash
-```
-
-How to install mesh and urdf file
----------------------------------
-
-The Gundam URDF file is automatically generated from Collada DAE file.
-
-First, download the Gundam Collada file (ex. `GGC_TestModel_rx78_20170112.DAE`) under `gundam_rx78_description` directory.
-Then, run `./scripts/dae_to_urdf.py` file with the downloaded file name as an argument. This will create mesh files under `meshes/` directory and create the URDF file under `urdf/` directory.
-
-Finally, rename the file name to `urdf/gundam_rx78.urdf`
-
-```
-$ roscd gundam_rx78_description
-$ python ./scripts/ggc_dae_to_urdf.py GGC_TestModel_rx78_20170112.DAE --write_mesh
-$ mv urdf/GGC_TestModel_rx78_20170112.urdf urdf/gundam_rx78.urdf
-```
-You have to use urdf_parser_py version 0.4.0 instead of version 0.4.1.
