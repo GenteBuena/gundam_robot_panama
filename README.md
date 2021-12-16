@@ -1,7 +1,7 @@
 gundam_robot_Panama
 ========================================================================================================================================================================
 ROS packages for GUNDAM robots
-
+original: https://github.com/gundam-global-challenge/gundam_robot.git
 ![GUNDAM Gazebo Simulation](imgs/gundam_AKG.jpg)
 
 How to visualize URDF model
@@ -68,7 +68,7 @@ You can also find sample motion control files in the `gundam_rx78_control/sample
 joint_trajectory_client_csv.py
 ----------------------
 
-using the gundam control with joint_ajectory_client_csv.py and inputting a .csv file 
+using the gundam control with joint_tajectory_client_csv.py and inputting a .csv file 
 
 This will use the patterns indicated in the file to simulate the movement of the gundam according to the values of the angles of each component.
 
