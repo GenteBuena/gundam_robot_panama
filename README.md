@@ -2,7 +2,7 @@ gundam_robot_Panama
 ========================================================================================================================================================================
 ROS packages for GUNDAM robots
 
-![GUNDAM Gazebo Simulation](imgs\gundam_AKG.jpg)
+![GUNDAM Gazebo Simulation](imgs/gundam_AKG.jpg)
 
 How to visualize URDF model
 ===========================
@@ -59,7 +59,7 @@ $ rosrun gundam_rx78_control joint_trajectory_client_csv.py `rospack find gundam
 $ rosrun gundam_rx78_control joint_trajectory_client_csv.py `rospack find gundam_rx78_control`/sample/csv/up.csv
 ```
 
-![Alt Text](imgs\gundamAKG.gif)
+![Alt Text](imgs/gundamAKG.gif)
 
 Note that currently, we have several limitation on this simulation, we only have position controller etc.
 
