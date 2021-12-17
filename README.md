@@ -35,6 +35,7 @@ $ roslaunch gundam_rx78_description display.launch
 ![Rviz](imgs/rviz.png)
 
 
+![Rviz](imgs/rviz.gif)
 
 How to run gazebo simulation
 ============================
