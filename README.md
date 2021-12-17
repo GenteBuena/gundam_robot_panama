@@ -24,10 +24,10 @@ $ catkin_make
 $ source devel/setup.bash
 ```
 
-How to visualize URDF model
+Visualize URDF model
 ===========================
 
-To visualize URDF file in your rviz, you can use `display.launch` file.
+URDF file in rviz, you can use `display.launch` file.
 ```
 $ roslaunch gundam_rx78_description display.launch
 ```
@@ -37,23 +37,27 @@ $ roslaunch gundam_rx78_description display.launch
 
 ![Rviz](imgs/rviz.gif)
 
-How to run gazebo simulation
+Map of Panamá
+===========================
+
+![Rviz](imgs/mapPanama.png)
+
+
+
+
+
+
+
+Run gazebo simulation
 ============================
 
-To run a gazebo dynamics simulation, you can start `gundam_rx78_world.launch`.
+To run a gazebo simulation
 
 ```
 $ roslaunch gundam_rx78_gazebo gundam_rx78_world.launch
 ```
 
-To control joint angles, try a sample script.
-
-```
-# move upper body
-$ rosrun gundam_rx78_control joint_trajectory_client_example.py
-```
-
-Experimental
+To control joint angles
 ------------
 
 You can run "Robot"-like walking pattern on simulation
@@ -98,3 +102,7 @@ using the gundam control with joint_tajectory_client_csv.py and inputting a .csv
 This will use the patterns indicated in the file to simulate the movement of the gundam according to the values of the angles of each component.
 
 
+video Youtube: 
+----------------------
+
+https://www.youtube.com/watch?v=n6lPjfBhPsI&feature=emb_logo
